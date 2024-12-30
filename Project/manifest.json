@@ -1,0 +1,24 @@
+{
+ "manifest_version": 3,
+ "name": "Color Dragger",
+ "version": "0.1.0",
+ "description": "Makes a color trail appear when you hold click",
+ "permissions": [],
+ "host_permissions": ["<all_urls>"],
+ "icons": {
+   "16": "/images/pixil-frame-0.png",
+   "48": "/images/pixil-frame-0-48.png",
+   "128":"/images/pixil-frame-0-128.png"
+ },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "js": ["/content_world_main.js"],
+      "css": ["/also_circles.css"],
+      "html": ["/circles.html"]
+    }
+  ]
+}
